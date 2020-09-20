@@ -2,14 +2,14 @@ from settings import *
 
 text_map = [
     'WWWWWWWWWW',
+    'W..W.....W',
+    'W.WW..WW.W',
     'W........W',
+    'W.WW.....W',
     'W........W',
-    'W........W',
-    'W........W',
-    'W........W',
-    'W........W',
-    'W........W',
-    'W........W',
+    'W..W.....W',
+    'W.....WW.W',
+    'W.W.W..W.W',
     'WWWWWWWWWW'
 ]
 

@@ -18,19 +18,23 @@ class Player:
         sin_a = math.sin(self.angle)
         cos_a = math.cos(self.angle)
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_w] and ((self.x + self.speed * cos_a) // TILE * TILE, (self.y + self.speed * sin_a) // TILE * TILE) not in world_map:
+        if keys[pygame.K_w]:
             self.x += self.speed * cos_a
             self.y += self.speed * sin_a
-        if keys[pygame.K_s] and ((self.y - self.speed * sin_a) // TILE * TILE, (self.x - self.speed * cos_a) // TILE * TILE) not in world_map:
+        if keys[pygame.K_s]:
             self.x += -self.speed * cos_a
             self.y += -self.speed * sin_a
-        if keys[pygame.K_a] and ((self.x + self.speed * sin_a) // TILE * TILE, (self.y - self.speed * cos_a) // TILE * TILE) not in world_map:
+        if keys[pygame.K_a]:
             self.x += self.speed * sin_a
             self.y += -self.speed * cos_a
-        if keys[pygame.K_d] and ((self.x - self.speed * sin_a) // TILE * TILE, (self.y + self.speed * cos_a) // TILE * TILE) not in world_map:
+        if keys[pygame.K_d]:
             self.x += -self.speed * sin_a
             self.y += self.speed * cos_a
         if keys[pygame.K_LEFT]:
             self.angle -= 0.1
         if keys[pygame.K_RIGHT]:
             self.angle += 0.1
+        if keys[pygame.K_LSHIFT]:
+            self.speed = 2
+        else:
+            self.speed = 4

@@ -8,6 +8,9 @@ from raycast import ray_casting
 pygame.init()
 
 display1 = pygame.display.set_mode((WIDTH, HEIGHT))
+
+pygame.display.set_caption("rays")
+
 clock = pygame.time.Clock()
 
 runner = True
@@ -24,9 +27,9 @@ while True:
     player.movement()
     ray_casting(display1, player.get_pos(), player.angle)
 
-    pygame.draw.circle(display1, GREEN, player.get_pos(), RADIUS)
+    #pygame.draw.circle(display1, GREEN, player.get_pos(), RADIUS)
 
-    for x, y in world_map:
-        pygame.draw.rect(display1, WHITE, (x, y, TILE, TILE), 2)
+    #for x, y in world_map:
+        #pygame.draw.rect(display1, WHITE, (x, y, TILE, TILE), 2)
     pygame.display.flip()
     clock.tick(FPS)

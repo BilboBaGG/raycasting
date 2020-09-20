@@ -2,7 +2,7 @@ import math
 
 # game settings
 
-FPS = 70
+FPS = 100
 
 WIDTH = 500
 HEIGHT = 500
@@ -12,23 +12,27 @@ DIAGONAL = int(math.sqrt(WIDTH ** 2 + HEIGHT ** 2))
 HALF_WIDTH = WIDTH // 2
 HALF_HEIGHT = HEIGHT // 2
 
+# blocks settings
+
+TILE = 50
+
 # ray casting
 
 FOV = math.pi / 3
 HALF_FOV = FOV / 2
-QUATN_RAYS = 120
+QUANT_RAYS = 100
 MAX_DEPTH = DIAGONAL
-DELTA_ANGLE = FOV / QUATN_RAYS
+DELTA_ANGLE = FOV / QUANT_RAYS
+
+SCALE = WIDTH // QUANT_RAYS
+DIST = QUANT_RAYS / (2 * math.tan(HALF_FOV))
+PROJ_COEFF = DIST * TILE
 
 # player settings
 
 PLAYER_POS = (HALF_WIDTH, HALF_HEIGHT)
-PLAYER_SPEED = 2
+PLAYER_SPEED = 4
 RADIUS = 6
-
-# blocks settings
-
-TILE = 50
 
 # base colors
 
